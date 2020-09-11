@@ -23,7 +23,7 @@ PROYECTO EN CONSTRUCCION
 
 Deployado
 
-[https://elsa-dev.github.io/proyecto-porfolio/]
+[https://elsa-dev.github.io/20-clase-ADA-SHOP/]
 
 -Primero pasos Js
 
