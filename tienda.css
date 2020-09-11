@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+
+}
+
+body {
+    background-color: #e2dede; 
+}
+
+nav {
+    border: 4px solid red;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    border: 4px solid violet;  
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-size {
+    width: 25px;
+    
+}
+
+.logo-size > img {
+    width: 100%;
+}
+
+
+.logo > h2 {
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+.imagen-cabecera {
+    border: 4px solid green;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://frontend-proyecto-tienda.adaitw.org/images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagen-cabecera h1 {
+    border: 4px solid orangered;
+    color: white;
+    
+}
+
+main {
+    border: 4px solid gray;
+    
+    display: flex;
+    
+}
+
+
+
+
+aside {
+    border: 4px solid rgb(211, 87, 16);
+    width: 20%;
+    min-width: 300px;
+    
+}
+
+aside .contenedor-aside {
+    border: 4px solid rgb(31, 10, 148);
+    margin: 20px;
+}
+aside h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e2e31;
+    padding: 14px 0;
+}
+
+.cabecera-aside .button {
+    border: 0;
+    height: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tacho {
+    display: flex;
+    align-items: center;
+}
+
+
+
+aside .contenedor-aside .cabecera-aside {
+    border: 4px solid rgb(15, 155, 78);
+    display: flex;
+    justify-content: space-between;
+}
+
+.columna-aside {
+    border: 4px solid rgb(231, 18, 54);
+}
+
+.input-columna {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-buscar {
+    border: none;
+    border-bottom: 2px solid #2e2e31;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.fa-star {
+    color: #fbc02d;
+}
+
+
+
+
+/* MAIN */
+
+main {
+    padding: 50px 0;
+}
+
+
+
+
+.tarjetas {
+    border: 4px solid rgb(15, 187, 70);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CABECERA DE TARJETAS  */
+
+.cabecera-tarjetas {
+    border: 4px solid crimson;
+    font-size: 14px;
+    background-color: white;
+    height: 100px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cantidad-productos {
+    border: 4px solid rgb(17, 76, 159);
+}
+
+.organizador-productos {
+    border: 4px solid rgb(226, 164, 30);
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.organizador-productos i {
+    cursor: pointer;
+}
+
+
+/* TARJETAS DE PRODUCTOS */
+
+
+.tarjetas-productos {
+    border: 4px solid blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+/* CLASES PARA JS */
+
+.tarjetas-productos-column {
+    flex-direction: column;
+}
+/* CLASES PARA JS */
+
+.producto {
+    border: 4px solid rgb(10, 7, 14);
+    padding: 40px;
+    margin: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+
+/* CLASES PARA JS */
+
+.producto-horizontal {
+    align-items: flex-start;
+}
+/* CLASES PARA JS */
+
+
+.especificaciones {
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.producto .img-size {
+    border: 4px solid rgb(59, 13, 120);
+    width: 250px;
+    
+}
+
+.producto .img-size img {
+    width: 100%;
+    height: auto;
+    
+}
+.especificaciones h3{
+    font-weight: 600;
+}
+
+.especificaciones h3, 
+.especificaciones p, 
+.especificaciones .calificacion {
+    padding: 10px;
+}
+
+.button-comprar {
+    margin: 20px 0;
+    padding: 20px 0;
+    border: 0;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-comprar:hover {
+    background-color: #e2dede;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #FFFFFF;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer .logo h2{
+    font-size: 14px;
+}
+
+
+
+/* CLASES PARA JS */
+
+
+.hidden {
+    display: none;
+}
+
