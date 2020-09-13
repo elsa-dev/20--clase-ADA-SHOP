@@ -299,8 +299,9 @@ main {
 /* MODAL CARRITO */
 
 .menu {
-    background-color: rgb(226, 164, 30);
-    width: 200px;
+    border: 4px solid rgb(226, 164, 30);
+    background-color: white;
+    width: 400px;
     height: 100vh;
     position: absolute;
     right: 0;
@@ -319,8 +320,72 @@ main {
     right: 0;
     top: 0;
 }
-/* MODAL CARRITO */
-/* MODAL CARRITO */
+
+.container-carrito {
+    border: 3px solid violet;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado-carrito {
+    border: 3px solid green;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+/* MODAL DE PAGO */
+/* MODAL DE PAGO */
+
+.modal-compra {
+    border: 3px solid orange;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-compra {
+    border: 3px solid rgb(19, 165, 243);
+}
+
+.main-compra {
+    border: 3px solid #7460ce;
+    display: flex;
+}
+
+.datos-compra {
+    border: 3px solid #9a9d08;
+    display: flex;
+    flex-direction: column;
+}
+
+.montos {
+    border: 3px solid #329785;
+    background-color: #cacaca;
+}
+
+.footer-compra {
+    border: 3px solid rgb(255, 0, 89);
+    display: flex;
+    flex-direction: column;
+}
+
+/* MODAL DE PAGO */
+/* MODAL DE PAGO */
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -338,11 +403,4 @@ footer .logo h2{
 }
 
 
-
-/* CLASES PARA JS */
-
-
-.hidden {
-    display: none;
-}
 

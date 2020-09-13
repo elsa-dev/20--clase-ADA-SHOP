@@ -62,6 +62,7 @@ limpiarSeleccionesUsuario = () => {
 
 
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
+// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
 
 const botonAbrirMenu = document.getElementById("abrir-menu")
 const botonCerrarMenu = document.getElementById("cerrar-menu")
@@ -75,3 +76,5 @@ botonAbrirMenu.onclick = () => {
 botonCerrarMenu.onclick = () => {
     overlay.classList.add("ocultar")
 }
+// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
+// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY

@@ -456,17 +456,81 @@
 
     <div class="overlay ocultar" id="overlay">
         <div class="menu " id="menu">
-            <ul>
-                <li>inicio</li>
-                <li>contacto</li>
-                <li>mis proyectos</li>
-                <li>hola</li>
-            </ul>
-            <button id="cerrar-menu">cerrar</button>
+            <div class="container-carrito">
+                <div class="encabezado-carrito">
+                    <h2>Carrito</h2>
+                    <button id="cerrar-menu">X</button>
+                </div>
+
+                <p> x producto(s) agregado(s)</p>
+                <p></p>
+                <p></p>
+                <p>Subtotal $xxxx</p>
+                <button>COMPRAR</button>
+                <button>VACIAR</button>
+            </div>
+
+
+
         </div>
     </div>
     <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
     <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
+
+    <!-- MODAL DE PAGO  -->
+    <!-- MODAL DE PAGO  -->
+
+    <div class="modal-compra">
+        <div class="header-compra">
+            <h2>Checkout</h2>
+        </div>
+        <div class="main-compra">
+
+            <form action="" class="datos-compra">
+                <h3>
+                    Datos Personales
+                </h3>
+                <h2>Nombre y apellido *</h2>
+                <label for="text">
+                    <input type="text" required>
+                </label>
+                
+                <h2>
+                    Email *
+                </h2>
+                <label for="email">
+                  <input type="email">  
+                </label>
+                
+
+                
+                <p>opciones de pago</p>
+                <input type="radio" name="metodo-de-pago" value="efectivo-debito"> Efectivo/Debito
+                <input type="radio" name="metodo-de-pago" value="tarjeta-de-credito"> Tarjeta de credito
+
+            </form>
+            <div class="montos">
+                <p>Resumen</p>
+                <p>subtotal</p>
+                total:
+
+            </div>
+
+
+        </div>
+        <div class="footer-compra">
+            <button>SEGUIR COMPRANDO</button>
+            <button>FINALIZAR</button>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL DE PAGO  -->
+    <!-- MODAL DE PAGO  -->
+
+
+
 
     <footer>
         <div class="logo">
