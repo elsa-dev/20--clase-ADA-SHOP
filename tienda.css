@@ -124,11 +124,16 @@ aside .contenedor-aside .cabecera-aside {
     flex-direction: column;
 }
 
-.input-buscar {
+.filtro {
     border: none;
     border-bottom: 2px solid #2e2e31;
     background-color: transparent;
     padding: 5px;
+}
+
+.fas.fa-search {
+    position: relative;
+    right: 25px;
 }
 
 .fa-star {
