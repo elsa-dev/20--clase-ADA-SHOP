@@ -29,7 +29,6 @@ nav {
 
 .logo-size {
     width: 25px;
-    
 }
 
 .logo-size > img {
@@ -37,10 +36,18 @@ nav {
 }
 
 
-.logo > h2 {
+.logo .button-carrito {
     font-weight: 400;
     font-size: 16px;
     margin-left: 10px;
+    width: 170px;
+    height: 27px;
+    padding-left: 25px;
+}
+
+.fas.fa-shopping-cart {
+    position: relative;
+    left: 35px;
 }
 
 
@@ -83,9 +90,7 @@ nav {
 
 main {
     border: 4px solid gray;
-    
     display: flex;
-    
 }
 
 
@@ -275,6 +280,8 @@ main {
     padding: 10px;
 }
 
+
+/* ACA ESTA REPETIDO EL CSS DEL BUTTON  */
 .button-comprar {
     margin: 20px 0;
     padding: 20px 0;
@@ -288,8 +295,8 @@ main {
     background-color: #e2dede;
 }
 
-/* MENU  */
-
+/* MODAL CARRITO */
+/* MODAL CARRITO */
 
 .menu {
     background-color: rgb(226, 164, 30);
@@ -312,8 +319,8 @@ main {
     right: 0;
     top: 0;
 }
-
-
+/* MODAL CARRITO */
+/* MODAL CARRITO */
 
 
 
