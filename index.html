@@ -21,8 +21,8 @@
             </div>
             <div class="logo">
                 <i class="fas fa-shopping-cart"></i>
-                <h2>carrito 0 items</h2>
-            </div>
+                <button id="abrir-menu" class="button" >carrito 0 items</button>
+                     </div>
 
             </div>
         </nav>
@@ -50,7 +50,7 @@
                 <div class="cabecera-aside">
                     <h2>FILTROS</h2>
                     <div class="tacho">
-                        <button class="button"><i class="fas fa-trash-alt"></i>Limpiar</button>
+                        <button class="button" id="button"><i class="fas fa-trash-alt"></i>Limpiar</button>
                     </div>
                 </div>
 
@@ -447,13 +447,25 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
     </main>
+
+
+    <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
+
+    <button id="abrir-menu">abrir menu</button>
+
+    <div class="overlay ocultar" id="overlay">
+        <div class="menu " id="menu">
+            <ul>
+                <li>inicio</li>
+                <li>contacto</li>
+                <li>mis proyectos</li>
+                <li>hola</li>
+            </ul>
+            <button id="cerrar-menu">cerrar</button>
+        </div>
+    </div>
+
 
     <footer>
         <div class="logo">

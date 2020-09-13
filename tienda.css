@@ -109,12 +109,16 @@ aside h2 {
     padding: 14px 0;
 }
 
-.cabecera-aside .button {
+/* BOTON */
+
+.button {
     border: 0;
     height: 15px;
     background-color: transparent;
     cursor: pointer;
 }
+
+/* BOTON  */
 
 .tacho {
     display: flex;
@@ -284,10 +288,30 @@ main {
     background-color: #e2dede;
 }
 
+/* MENU  */
 
 
+.menu {
+    background-color: rgb(226, 164, 30);
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
+.ocultar {
+    display: none;
+}
 
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
 
 

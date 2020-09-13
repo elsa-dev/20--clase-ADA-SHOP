@@ -1,6 +1,6 @@
 const inputNombre = document.querySelector('.filtro')
 console.log(inputNombre)
-const botonLimpiar = document.querySelector(`button`)
+const botonLimpiar = document.getElementById(`button`)
 console.log(botonLimpiar)
 const checkboxes = document.querySelectorAll(`.review-filter`)
 console.log(checkboxes)
@@ -46,6 +46,9 @@ const filtrarTarjetas = () => {
     }
 };
 
+
+// BOTON DE LIMPIAR INPUT Y CHECKBOXXES 
+
 botonLimpiar.onclick = () => {
     limpiarSeleccionesUsuario()
 }
@@ -55,4 +58,20 @@ limpiarSeleccionesUsuario = () => {
     for (let checkbox of checkboxes) {
         checkbox.checked = false
     }
+}
+
+
+// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
+
+const botonAbrirMenu = document.getElementById("abrir-menu")
+const botonCerrarMenu = document.getElementById("cerrar-menu")
+const menu = document.getElementById("menu")
+const overlay = document.getElementById("overlay")
+
+botonAbrirMenu.onclick = () => {
+    overlay.classList.remove("ocultar")
+}
+
+botonCerrarMenu.onclick = () => {
+    overlay.classList.add("ocultar")
 }
