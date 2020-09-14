@@ -52,13 +52,14 @@ nav {
 
 
 .contenedor-banner {
+    border: 4px solid rgb(12, 180, 107);
     width: 100%;
     height: 300px;
     position: relative;
 }
 
 .contenedor-banner img {
-    /* width: 100%; */
+    width: 100%;
     height: 100%;
 }
 
@@ -148,7 +149,7 @@ aside .contenedor-aside .cabecera-aside {
     flex-direction: column;
 }
 
-.filtro {
+.input-style {
     border: none;
     border-bottom: 2px solid #2e2e31;
     background-color: transparent;
@@ -343,9 +344,16 @@ main {
 
 .modal-compra {
     border: 3px solid orange;
-    width: 500px;
+    background-color: white;
+    width: 800px;
+    height: 800px;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px ;
+    margin-top: -400px;
 }
 
 .header-compra {
@@ -371,7 +379,7 @@ main {
 .footer-compra {
     border: 3px solid rgb(255, 0, 89);
     display: flex;
-    flex-direction: column;
+    
 }
 
 /* MODAL DE PAGO */

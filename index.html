@@ -59,7 +59,7 @@
                         <h2>
                             BUSQUEDA
                         </h2>
-                        <input type="text" class="filtro" name="buscador" placeholder="Buscar productos">
+                        <input type="text" class="filtro input-style" name="buscador" placeholder="Buscar productos">
                         <i class="fas fa-search"></i>
 
 
@@ -480,6 +480,9 @@
     <!-- MODAL DE PAGO  -->
     <!-- MODAL DE PAGO  -->
 
+
+    <!-- SACAR DESPUES  -->
+    <!-- <div class="overlay ocultar" id="overlay"> -->
     <div class="modal-compra">
         <div class="header-compra">
             <h2>Checkout</h2>
@@ -491,22 +494,36 @@
                     Datos Personales
                 </h3>
                 <h2>Nombre y apellido *</h2>
-                <label for="text">
-                    <input type="text" required>
+                <label for="nombre">
+                    <input type="text" name="nombre" id="nombre" class="input-style" required>
                 </label>
-                
+
                 <h2>
                     Email *
                 </h2>
                 <label for="email">
-                  <input type="email">  
+                    <input type="email" name="email" id="email" class="input-style">
                 </label>
-                
 
-                
-                <p>opciones de pago</p>
-                <input type="radio" name="metodo-de-pago" value="efectivo-debito"> Efectivo/Debito
-                <input type="radio" name="metodo-de-pago" value="tarjeta-de-credito"> Tarjeta de credito
+
+
+                <h3>Opciones de pago</h3>
+                <label for="metodo-de-pago">
+                    <input type="radio" name="metodo-de-pago" id="metodo-de-pago" value="efectivo-debito">
+                    Efectivo/Debito
+                </label>
+
+                <label for="tarjeta-de-credito">
+                    <input type="radio" name="metodo-de-pago" id="tarjeta-de-credito" value="tarjeta-de-credito">
+                    Tarjeta de credito</label>
+
+                <label for="envio">
+                    <input type="checkbox" id="envio"> Necesito envio
+                </label>
+                <label for="descuento">
+                    <input type="checkbox" id="descuento">Tengo tarjeta de descuento
+                </label>
+
 
             </form>
             <div class="montos">
@@ -525,6 +542,8 @@
         </div>
 
     </div>
+
+<!-- </div> -->
 
     <!-- MODAL DE PAGO  -->
     <!-- MODAL DE PAGO  -->
