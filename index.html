@@ -449,7 +449,6 @@
         </section>
     </main>
 
-
     <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
     <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
     <!-- <button id="abrir-menu">abrir menu</button> mande el boton a donde correspondia-->
@@ -466,12 +465,9 @@
                 <p></p>
                 <p></p>
                 <p>Subtotal $xxxx</p>
-                <button>COMPRAR</button>
+                <button id="abrir-modal-checkout">COMPRAR</button>
                 <button>VACIAR</button>
             </div>
-
-
-
         </div>
     </div>
     <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
@@ -480,10 +476,8 @@
     <!-- MODAL DE PAGO  -->
     <!-- MODAL DE PAGO  -->
 
-
-    <!-- SACAR DESPUES  -->
-    <!-- <div class="overlay ocultar" id="overlay"> -->
-    <div class="modal-compra">
+<div class="overlay ocultar" id="overlay2">
+    <div class="modal-compra" id="modal-checkout" >
         <div class="header-compra">
             <h2>Checkout</h2>
         </div>
@@ -536,14 +530,14 @@
 
         </div>
         <div class="footer-compra">
-            <button>SEGUIR COMPRANDO</button>
+            <button id="cerrar-checkout">SEGUIR COMPRANDO</button>
             <button>FINALIZAR</button>
 
         </div>
 
     </div>
 
-<!-- </div> -->
+</div>
 
     <!-- MODAL DE PAGO  -->
     <!-- MODAL DE PAGO  -->

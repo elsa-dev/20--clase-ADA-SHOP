@@ -66,7 +66,7 @@ limpiarSeleccionesUsuario = () => {
 
 const botonAbrirMenu = document.getElementById("abrir-menu")
 const botonCerrarMenu = document.getElementById("cerrar-menu")
-const menu = document.getElementById("menu")
+// const menu = document.getElementById("menu")
 const overlay = document.getElementById("overlay")
 
 botonAbrirMenu.onclick = () => {
@@ -78,3 +78,16 @@ botonCerrarMenu.onclick = () => {
 }
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
+
+const botonAbrirCheckout = document.getElementById("abrir-modal-checkout")
+const botonCerrarCheckout = document.getElementById("cerrar-checkout")
+const menu = document.getElementById("menu")
+const overlayCheckout = document.getElementById("overlay2")
+
+botonAbrirCheckout.onclick = () => {
+    overlay2.classList.remove("ocultar")
+}
+
+botonCerrarCheckout.onclick = () => {
+    overlay2.classList.add("ocultar")
+}
