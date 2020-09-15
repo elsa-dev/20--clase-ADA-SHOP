@@ -71,10 +71,12 @@ const overlay = document.getElementById("overlay")
 
 botonAbrirMenu.onclick = () => {
     overlay.classList.remove("ocultar")
+    document.body.classList.add("no-scroll")
 }
 
 botonCerrarMenu.onclick = () => {
     overlay.classList.add("ocultar")
+    document.body.classList.remove("no-scroll")
 }
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
@@ -86,6 +88,7 @@ const overlayCheckout = document.getElementById("overlay2")
 
 botonAbrirCheckout.onclick = () => {
     overlay2.classList.remove("ocultar")
+    // document.body.classList.add("no-scroll") no era necesario
 }
 
 botonCerrarCheckout.onclick = () => {

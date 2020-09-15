@@ -336,6 +336,12 @@ main {
 }
 
 
+/* PARA SACAR SCROLL DE OVERLAYS */
+
+.no-scroll {
+    overflow: hidden;
+}
+
 
 
 
