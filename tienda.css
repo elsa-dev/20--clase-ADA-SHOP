@@ -166,6 +166,10 @@ aside .contenedor-aside .cabecera-aside {
     padding: 5px;
 }
 
+.hidden {
+    display: none;
+}
+
 .fas.fa-search {
     position: relative;
     right: 25px;
@@ -331,7 +335,7 @@ main {
     position: absolute;
     right: 0;
     top: 0;
-    transition: 2s;
+    transition: 1s;
     transform: translate(400px);
 }
 
@@ -354,12 +358,40 @@ main {
     flex-direction: column;
 }
 
+container-carrito h2 {
+    font-size: 16px;
+}
+
 .encabezado-carrito {
     border: 3px solid green;
     display: flex;
     justify-content: space-between;
 }
 
+.comprar {
+    height: 50px;
+    margin-top: 20px;
+    color: white;
+    border: 1px solid #4caf50;
+    background-color:#4caf50;
+    border-radius: 5px;
+}
+
+.vaciar {
+    height: 50px;
+    margin-top: 20px;
+    background-color : white;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    border-radius: 5px;
+
+}
+
+.vaciar:hover {
+    color: white;
+    background-color: #d32f2f;
+    
+}
 
 /* PARA SACAR SCROLL DE OVERLAYS */
 
