@@ -11,6 +11,8 @@
 
 body {
     background-color: #e2dede; 
+    overflow-x: hidden;
+
 }
 
 nav {
@@ -329,11 +331,11 @@ main {
     position: absolute;
     right: 0;
     top: 0;
+    transition: 2s;
+    transform: translate(400px);
 }
 
-.ocultar {
-    display: none;
-}
+
 
 .overlay {
     width: 100vw;
@@ -342,6 +344,7 @@ main {
     position: absolute;
     right: 0;
     top: 0;
+    
 }
 
 .container-carrito {
@@ -364,6 +367,13 @@ main {
     overflow: hidden;
 }
 
+.mostrar-menu {
+    transform: translate(0);
+}
+
+.ocultar {
+    display: none;
+}
 
 
 
