@@ -427,11 +427,12 @@ main {
 /* MODAL DE PAGO */
 /* MODAL DE PAGO */
 
-.modal-compra {
-    border: 3px solid orange;
+.modal-checkout {
+    border: 5px solid orange;
     background-color: white;
     width: 800px;
     height: 800px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -441,33 +442,100 @@ main {
     margin-top: -400px;
 }
 
-.header-compra {
-    border: 3px solid rgb(19, 165, 243);
+.header-checkout {
+    border: 5px solid rgb(19, 165, 243);
+}
+.header-checkout h2 {
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.main-compra {
-    border: 3px solid #7460ce;
+
+.main-checkout {
+    border: 5px solid #7460ce;
     display: flex;
 }
 
-.datos-compra {
-    border: 3px solid #9a9d08;
+.datos-checkout {
+    border: 5px solid #0a9e3c;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.datos-personales {
+    border: 5px solid #ee8f13;
+    padding: 20px 0;
+}
+
+.datos-personales h3 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.datos-personales h2 {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.datos-personales label input {
+    width: 300px;
+}
+
+.opciones-pago {
+    border: 5px solid #cf1591;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
 }
 
-.montos {
-    border: 3px solid #329785;
-    background-color: #cacaca;
+.opciones-pago h3 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
 }
 
-.footer-compra {
-    border: 3px solid rgb(255, 0, 89);
+.opciones-pago label {
+    padding: 5px 0;
+}
+.opciones-pago label input{
+    padding: 5px 0;
+}
+
+.resumen {
+    border: 5px solid #ecf017;
+    background-color: #eee;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+.header-resumen h3 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+ 
+.montos {
+
+}
+
+
+
+
+.footer-checkout {
+    padding: 80px 10px 30px;
+    border: 5px solid rgb(255, 0, 89);
     display: flex;
     justify-content: flex-end;
-    
 }
-
 
 .seguir-comprando {
     height: 50px;
@@ -488,20 +556,14 @@ main {
     border: 1px solid #4caf50;
     border-radius: 5px;
     transition: 0.5s;
-
 }
 
 .seguir-comprando:hover {
-    
     background-color: #e0e0e0;
-    
 }
 
-
 .finalizar-compra:hover {
-    
     background-color: #388e3c;
-    
 }
 
 

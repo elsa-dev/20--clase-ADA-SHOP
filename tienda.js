@@ -1,26 +1,28 @@
-const filtroNombre = document.querySelector('#filtro')
+const filtroNombre = document.querySelector('#filtro');
+console.log(filtroNombre.value)
 
-const tarjetas = document.getElementsByClassName(`producto`)
+const tarjetas = document.getElementsByClassName("producto");
 
-const botonLimpiar = document.getElementById(`button`)
+const botonLimpiar = document.getElementById('button');
 
-const checkboxes = document.querySelectorAll(`.review-filter`)
+const checkboxes = document.querySelectorAll(`.review-filter`);
 
-const filtroRating = document.getElementsByClassName(`review-filter`)
+const filtroRating = document.getElementsByClassName('review-filter');
 
 
-// filtroNombre.oninput = ( ) => {
-//     for(let tarjeta of tarjetas) {
-//         const titulo = tarjeta.dataset.nombre;
-//         const busqueda = filtroNombre.value;
-//         if(titulo.includes(busqueda)) {
-//             tarjeta.classList.remove("hidden");
-//         }
-//         else {
-//             tarjeta.classList.add("hidden");
-//         }
-//     }
-// }
+
+filtroNombre.oninput = () => {
+    for(let tarjeta of tarjetas) {
+        const titulo = tarjeta.dataset.nombre;
+        const busqueda = filtroNombre.value;
+        if(titulo.includes(busqueda)) {
+            tarjeta.classList.remove('hidden');
+        }
+        else {
+            tarjeta.classList.add('hidden');
+        }
+    }
+};
 
 
 
