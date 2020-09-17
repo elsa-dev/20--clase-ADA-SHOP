@@ -1,5 +1,5 @@
-const filtroNombre = document.querySelector('#filtro');
-console.log(filtroNombre.value)
+const filtroNombre = document.getElementById('filtro');
+
 
 const tarjetas = document.getElementsByClassName("producto");
 
