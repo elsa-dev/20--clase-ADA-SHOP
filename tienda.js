@@ -9,7 +9,7 @@ const filtroRating = document.getElementsByClassName('review-filter');
 filtroNombre.oninput = () => {
     for(let tarjeta of tarjetas) {
         const titulo = tarjeta.dataset.nombre
-        const busqueda = filtroNombre.value
+        const busqueda = filtroNombre.value.toLowerCase()
         console.log('este es el titulo de la tarjeta', titulo)
         console.log('esto es lo que busca el usuario', busqueda)
         if(titulo.includes(busqueda)) {
@@ -111,6 +111,7 @@ botonCerrarCheckout.onclick = () => {
     overlay2.classList.add("ocultar")
 }
 
+// GRILLA Y LISTA DE PRODUCTOS
 
 const grilla = document.getElementById("grilla")
 console.log(grilla)
