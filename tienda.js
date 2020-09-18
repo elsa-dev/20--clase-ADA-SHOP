@@ -1,20 +1,17 @@
 const filtroNombre = document.getElementById('filtro');
-
-
 const tarjetas = document.getElementsByClassName("producto");
-
 const botonLimpiar = document.getElementById('button');
-
 const checkboxes = document.querySelectorAll(`.review-filter`);
-
 const filtroRating = document.getElementsByClassName('review-filter');
 
 
 
 filtroNombre.oninput = () => {
     for(let tarjeta of tarjetas) {
-        const titulo = tarjeta.dataset.nombre;
-        const busqueda = filtroNombre.value;
+        const titulo = tarjeta.dataset.nombre
+        const busqueda = filtroNombre.value
+        console.log('este es el titulo de la tarjeta', titulo)
+        console.log('esto es lo que busca el usuario', busqueda)
         if(titulo.includes(busqueda)) {
             tarjeta.classList.remove('hidden');
         }
@@ -27,40 +24,40 @@ filtroNombre.oninput = () => {
 
 
 
-// for (let checkbox of filtroRating) {
-//     checkbox.onclick = () => {
-//         filtrarTarjetas();
-//     };
-// }
+for (let checkbox of filtroRating) {
+    checkbox.onclick = () => {
+        filtrarTarjetas();
+    };
+}
 
-// const haycheckboxSeleccionado = () => {
-//     for (let checkbox of filtroRating) {
-//         if (checkbox.checked) {
-//             return true
-//         }
-//     }
-// };
+const haycheckboxSeleccionado = () => {
+    for (let checkbox of filtroRating) {
+        if (checkbox.checked) {
+            return true
+        }
+    }
+};
 
-// const coincidenCheckboxYtarjeta = (tarjeta) => {
-//     const rating= tarjeta.dataset.rating;
-//     for(let checkbox of filtroRating){
-//         if(checkbox.value === rating && checkbox.checked){
-//             return true;
-//         }
-//     }
-// };
+const coincidenCheckboxYtarjeta = (tarjeta) => {
+    const rating= tarjeta.dataset.rating;
+    for(let checkbox of filtroRating){
+        if(checkbox.value === rating && checkbox.checked){
+            return true;
+        }
+    }
+};
 
-// const filtrarTarjetas = () => {
-//     for(let tarjeta of tarjetas){
-//         tarjeta.classList.add(`hidden`);
-//         if(haycheckboxSeleccionado()) {
-//             if(coincidenCheckboxYtarjeta(tarjeta)) {
-//                 tarjeta.classList.remove(`hidden`);
-//             }
-//         }
-//         else{ tarjeta.classList.remove(`hidden`)}
-//     }
-// };
+const filtrarTarjetas = () => {
+    for(let tarjeta of tarjetas){
+        tarjeta.classList.add(`hidden`);
+        if(haycheckboxSeleccionado()) {
+            if(coincidenCheckboxYtarjeta(tarjeta)) {
+                tarjeta.classList.remove(`hidden`);
+            }
+        }
+        else{ tarjeta.classList.remove(`hidden`)}
+    }
+};
 
 
 // BOTON DE LIMPIAR INPUT Y CHECKBOXXES 
@@ -112,4 +109,21 @@ botonAbrirCheckout.onclick = () => {
 
 botonCerrarCheckout.onclick = () => {
     overlay2.classList.add("ocultar")
+}
+
+
+const grilla = document.getElementById("grilla")
+console.log(grilla)
+const lista = document.getElementById("lista")
+console.log(lista)
+const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
+console.log(contenedorTarjetas)
+
+
+lista.onclick = () => {
+    contenedorTarjetas.classList.add("tarjetas-productos-column")
+}
+grilla.onclick = () => {
+    contenedorTarjetas.classList.add("tarjetas-productos")
+    contenedorTarjetas.classList.remove("tarjetas-productos-column")
 }
