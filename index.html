@@ -557,20 +557,20 @@
 
                     <div class="opciones-pago">
                         <h3>Opciones de pago</h3>
-                        <label for="metodo-de-pago">
-                            <input type="radio" name="metodo-de-pago" id="metodo-de-pago" value="efectivo-debito">
+                        <label for="input-efectivo">
+                            <input type="radio" name="metodo-de-pago" id="input-efectivo" value="efectivo-debito" checked>
                             Efectivo/Debito
                         </label>
-                        <label for="tarjeta-de-credito">
-                            <input type="radio" name="metodo-de-pago" id="tarjeta-de-credito"
+                        <label for="input-credito">
+                            <input type="radio" name="metodo-de-pago" id="input-credito"
                                 value="tarjeta-de-credito">
                             Tarjeta de credito</label>
 
-                        <label for="envio">
-                            <input type="checkbox" id="envio"> Necesito envio
+                        <label for="input-envio">
+                            <input type="checkbox" id="input-envio"> Necesito envio
                         </label>
-                        <label for="descuento">
-                            <input type="checkbox" id="descuento">Tengo tarjeta de descuento
+                        <label for="input-descuento">
+                            <input type="checkbox" id="input-descuento">Tengo tarjeta de descuento
                         </label>
                     </div>
                 </form>
@@ -579,11 +579,11 @@
                         <h3>Resumen</h3>
                     </div>
                     <div class="montos" >
-                        <p>subtotal</p>
-                        <p>Descuento 10%</p>
-                        <p>Envio</p>
-                        <p>Recargo</p>
-                        <p>total:</p>
+                        <p>subtotal: <span id="subtotal">0</span> </p>
+                        <p class="hidden descuento">Descuento 10%: <span id="descuento">0</span></p>
+                        <p class="hidden envio">Envio: <span id="envio">0</span></p>
+                        <p class="hidden recargo">Recargo: <span id="recargo">0</span></p>
+                        <p>total: <span id="total">0</span></p>
                     </div>
 
 
