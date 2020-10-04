@@ -1,65 +1,161 @@
-const filtroNombre = document.getElementById('filtro');
-const tarjetas = document.getElementsByClassName("producto");
+const filtroBusqueda = document.getElementById('filtro-busqueda');
+const cards = document.getElementsByClassName("producto");
 const botonLimpiar = document.getElementById('button');
-const checkboxes = document.querySelectorAll(`.review-filter`);
+const checkboxes = document.querySelectorAll(`.limpiar`);
 const filtroRating = document.getElementsByClassName('review-filter');
+const filtroCategoria = document.getElementsByClassName("categoria")
+
+const c = console.log
 
 
+// FILTROS FILTROS FILTROS 
+// FILTROS FILTROS FILTROS 
 
-// filtroNombre.oninput = () => {
-//     for(let tarjeta of tarjetas) {
-//         const titulo = tarjeta.dataset.nombre
-//         const busqueda = filtroNombre.value.toLowerCase()
-//         console.log('este es el titulo de la tarjeta', titulo)
-//         console.log('esto es lo que busca el usuario', busqueda)
-//         if(titulo.includes(busqueda)) {
-//             tarjeta.classList.remove('hidden');
-//         }
-//         else {
-//             tarjeta.classList.add('hidden');
-//         }
-//     }
-// };
-
-
-
-
-for (let checkbox of filtroRating) {
-    checkbox.onclick = () => {
-        filtrarTarjetas();
-    };
+const compararInputConTarjeta = (card) => {
+    if (card.dataset.nombre.includes(filtroBusqueda.value.toLowerCase())) {
+        return true
+    }
+    else {
+        return false
+    }
 }
 
-const haycheckboxSeleccionado = () => {
+const compararcheckboxCategoriaConTarjeta = (card) => {
+    for (let checkbox of filtroCategoria) {
+        if (checkbox.checked) {
+            if (checkbox.value === card.dataset.categoria) {
+                return true
+            }
+        }
+    }
+    return false
+}
+
+const compararcheckboxRatingConTarjeta = (card) => {
+    for (let checkbox of filtroRating) {
+        if (checkbox.checked) {
+            if (checkbox.value === card.dataset.rating) {
+                return true
+            }
+        }
+    }
+    return false
+}
+
+const hayAlgoEscritoEnElInput = () => {
+    if (filtroBusqueda.value) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+const hayAlgunCheckboxCategoriaChequeado = () => {
+    for (let checkbox of filtroCategoria) {
+        if (checkbox.checked) {
+            return true
+        }
+    }
+    return false
+}
+
+const hayAlgunCheckboxRatingChequeado = () => {
     for (let checkbox of filtroRating) {
         if (checkbox.checked) {
             return true
         }
     }
-};
+    return false
+}
 
-const coincidenCheckboxYtarjeta = (tarjeta) => {
-    const rating= tarjeta.dataset.rating;
-    for(let checkbox of filtroRating){
-        if(checkbox.value === rating && checkbox.checked){
-            return true;
+const validarInput = (card) => {
+    if (hayAlgoEscritoEnElInput()) {
+        if (compararInputConTarjeta(card)) {
+            return true
+        }
+        else {
+            return false
         }
     }
-};
+    else {
+        return true
+    }
+}
+
+const validarCheckboxesCategoria = (card) => {
+    if (hayAlgunCheckboxCategoriaChequeado()) {
+        if (compararcheckboxCategoriaConTarjeta(card)) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else {
+        return true
+    }
+}
+
+const validarCheckboxesRating = (card) => {
+    if (hayAlgunCheckboxRatingChequeado()) {
+        if (compararcheckboxRatingConTarjeta(card)) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else {
+        return true
+    }
+}
+
+const pasaFiltros = (card) => {
+    if (validarInput(card) && validarCheckboxesCategoria(card) && validarCheckboxesRating(card)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+const ocultarTarjeta = (card) => {
+    return card.classList.add("hidden")
+}
+
+const mostrarTarjeta = (card) => {
+    return card.classList.remove("hidden")
+}
 
 const filtrarTarjetas = () => {
-    for(let tarjeta of tarjetas){
-        tarjeta.classList.add(`hidden`);
-        if(haycheckboxSeleccionado()) {
-            if(coincidenCheckboxYtarjeta(tarjeta)) {
-                tarjeta.classList.remove(`hidden`);
-            }
+    for (let card of cards) {
+        if (pasaFiltros(card)) {
+            mostrarTarjeta(card)
         }
-        else{ tarjeta.classList.remove(`hidden`)}
+        else {
+            ocultarTarjeta(card)
+        }
     }
-};
+}
+
+filtroBusqueda.oninput = () => {
+    filtrarTarjetas()
+}
+
+for (let checkbox of filtroRating) {
+    checkbox.oninput = () => {
+        filtrarTarjetas()
+    }
+}
+
+for (let checkbox of filtroCategoria) {
+    checkbox.oninput = () => {
+        filtrarTarjetas()
+    }
+}
 
 
+// BOTON DE LIMPIAR INPUT Y CHECKBOXXES 
 // BOTON DE LIMPIAR INPUT Y CHECKBOXXES 
 
 botonLimpiar.onclick = () => {
@@ -67,12 +163,14 @@ botonLimpiar.onclick = () => {
 }
 
 limpiarSeleccionesUsuario = () => {
-    filtroNombre.value = ""
+    filtroBusqueda.value = ""
     for (let checkbox of checkboxes) {
         checkbox.checked = false
     }
+    for( card of cards) {
+        mostrarTarjeta(card)
+    }
 }
-
 
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
@@ -112,13 +210,14 @@ botonCerrarCheckout.onclick = () => {
 }
 
 // GRILLA Y LISTA DE PRODUCTOS
+// GRILLA Y LISTA DE PRODUCTOS
 
 const grilla = document.getElementById("grilla")
-console.log(grilla)
+// console.log(grilla)
 const lista = document.getElementById("lista")
-console.log(lista)
+// console.log(lista)
 const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
-console.log(contenedorTarjetas)
+// console.log(contenedorTarjetas)
 
 
 lista.onclick = () => {
@@ -129,6 +228,8 @@ grilla.onclick = () => {
     contenedorTarjetas.classList.remove("tarjetas-productos-column")
 }
 
+// CHECKOUT CHECKOUT CHECKOUT 
+// CHECKOUT CHECKOUT CHECKOUT 
 
 const mostrarSubtotal = document.querySelector("#subtotal")
 const mostrarDescuento = document.querySelector("#descuento")
@@ -151,17 +252,17 @@ mostrarSubtotal.textContent = subtotal
 mostrarTotal.textContent = subtotal
 
 const obtenerGastoEnvio = (subtotal) => {
-return subtotal +50
+    return subtotal + 50
 }
 
 const obtenerRecargo = (subtotal) => {
     let recargo = subtotal * 0.1
-    return  subtotal + recargo
+    return subtotal + recargo
 }
 
 const obtenerDescuento = (subtotal) => {
     let descuento = subtotal * 0.1
-    return  subtotal - descuento
+    return subtotal - descuento
 }
 
 
@@ -172,13 +273,13 @@ radioEfectivo.oninput = () => {
 
 checkboxDescuento.oninput = () => {
     parrafoDescuento.classList.toggle("hidden")
-    mostrarDescuento.textContent = subtotal - obtenerDescuento(subtotal) 
+    mostrarDescuento.textContent = subtotal - obtenerDescuento(subtotal)
     mostrarTotal.textContent = obtenerTotal(subtotal)
 }
 
 radioCredito.oninput = () => {
     parrafoRecargo.classList.remove("hidden")
-    mostrarRecargo.textContent =  obtenerRecargo(subtotal) - subtotal
+    mostrarRecargo.textContent = obtenerRecargo(subtotal) - subtotal
     mostrarTotal.textContent = obtenerTotal(subtotal)
 }
 
@@ -188,24 +289,21 @@ checkboxEnvio.oninput = () => {
     mostrarTotal.textContent = obtenerTotal(subtotal)
 }
 
-
-
 const obtenerTotal = (subtotal) => {
     let descuento = 0
     let recargo = 0
     let gastosDeEnvio = 0
-    if(checkboxDescuento.checked) {
+    if (checkboxDescuento.checked) {
         descuento = obtenerDescuento(subtotal) - subtotal
     }
-    if(radioCredito.checked) {
+    if (radioCredito.checked) {
         recargo = obtenerRecargo(subtotal) - subtotal
     }
     else {
         parrafoRecargo.classList.add('hidden')
     }
-    if(checkboxEnvio.checked) {
+    if (checkboxEnvio.checked) {
         gastosDeEnvio = obtenerGastoEnvio(subtotal) - subtotal
     }
     return subtotal + descuento + recargo + gastosDeEnvio
-
 }
