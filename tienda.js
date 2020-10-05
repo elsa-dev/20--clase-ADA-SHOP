@@ -213,19 +213,44 @@ botonCerrarCheckout.onclick = () => {
 // GRILLA Y LISTA DE PRODUCTOS
 
 const grilla = document.getElementById("grilla")
-// console.log(grilla)
 const lista = document.getElementById("lista")
-// console.log(lista)
 const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
-// console.log(contenedorTarjetas)
+// SELECCIONAR ESPECIFICACIONES DE TARJETAS ya esta cards
+const descripciones = document.getElementsByClassName('especificaciones')
+const descripcionProducto = document.getElementById('descripcion-producto')
+const textos = document.getElementsByClassName('descripcion-producto')
 
+c(textos)
 
 lista.onclick = () => {
     contenedorTarjetas.classList.add("tarjetas-productos-column")
+    // cada card horizontal
+    for(card of cards) {
+       card.classList.add('foto-izq') 
+    }
+    for(let descripcion of descripciones) {
+      descripcion.classList.add("producto-horizontal")  
+    }
+    for(let texto of textos) {
+        texto.classList.remove('hidden')
+    }
+    
+    
+    
 }
 grilla.onclick = () => {
     contenedorTarjetas.classList.add("tarjetas-productos")
     contenedorTarjetas.classList.remove("tarjetas-productos-column")
+    for(card of cards) {
+        card.classList.remove('foto-izq') 
+     }
+    for(let descripcion of descripciones) {
+       descripcion.classList.remove("producto-horizontal") 
+    }
+    for(let texto of textos) {
+        texto.classList.add('hidden')
+    }
+    
 }
 
 // CHECKOUT CHECKOUT CHECKOUT 
@@ -246,7 +271,7 @@ const parrafoDescuento = document.querySelector(".descuento")
 const parrafoEnvio = document.querySelector(".envio")
 const parrafoRecargo = document.querySelector(".recargo")
 
-const subtotal = 100
+const subtotal = 5596
 
 mostrarSubtotal.textContent = subtotal
 mostrarTotal.textContent = subtotal

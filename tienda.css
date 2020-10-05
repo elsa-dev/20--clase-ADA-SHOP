@@ -246,23 +246,32 @@ main {
     padding: 40px;
     margin: 5px;
     background-color: white;
+    transition: 0.3s ease-in;
     display: flex;
+    /* TENGO QUE SACAER ESTO PARA VER LOS DATOS A LA DERECHA _ */
     flex-direction: column; 
     justify-content: center;
+    align-items: center;
     flex: 1;
 }
 
 /* CLASES PARA JS */
-
+/* PARA EL CONTENEDOR tarjetas una abajo de la otra */
 .tarjetas-productos-column {
     display: flex;
     flex-direction: column;
 }
 
-.producto-horizontal {
-    align-items: flex-start;
+.foto-izq {
+    display: flex;
+    flex-direction: row;
 }
-/* CLASES PARA JS */
+
+
+.producto:hover {
+    box-shadow: 3px 5px 10px 13px rgb(143, 143, 143);
+    
+}
 
 .producto .contenedor-img {
     border: 4px solid rgb(59, 13, 120);
@@ -286,12 +295,19 @@ main {
 
 
 .especificaciones {
+    width: 100%;
     border: 2px solid orange;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     
+}
+
+/* CLASES PARA JS descripcion izq */
+.producto-horizontal {
+    align-items: flex-start;
 }
 
 
@@ -309,6 +325,7 @@ main {
 
 /* ACA ESTA REPETIDO EL CSS DEL BUTTON  */
 .button-comprar {
+    width: 290px;
     margin: 20px 0;
     padding: 20px 0;
     border: 0;
