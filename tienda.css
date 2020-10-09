@@ -9,10 +9,17 @@
 
 }
 
+
+
 body {
     background-color: #e2dede; 
     overflow-x: hidden;
+    width: 100%;
 
+}
+
+header {
+    width: 100%;
 }
 
 nav {
@@ -20,7 +27,7 @@ nav {
     height: 70px;
     display: flex;
     justify-content: space-between;
-    max-width: 1500px;
+    width: 100%;
     margin: auto;
 }
 
@@ -63,7 +70,7 @@ nav {
 
 .contenedor-banner {
     border: 4px solid rgb(12, 180, 107);
-    width: 100%;
+    width: 100vw;
     height: 300px;
     position: relative;
 }
@@ -109,8 +116,8 @@ main {
 
 aside {
     border: 4px solid rgb(211, 87, 16);
-    width: 20%;
-    min-width: 300px;
+    /* width: 20%; */
+    /* min-width: 300px; */
     
 }
 
@@ -164,6 +171,8 @@ aside .contenedor-aside .cabecera-aside {
     border-bottom: 2px solid #2e2e31;
     background-color: transparent;
     padding: 5px;
+    
+    
 }
 
 
@@ -218,10 +227,11 @@ main {
 
 .organizador-productos {
     border: 4px solid rgb(226, 164, 30);
-    width: 150px;
+    width: 250px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 .organizador-productos button {
     border-bottom: none;
@@ -231,6 +241,39 @@ main {
 .organizador-productos i {
     cursor: pointer;
 }
+
+.fas.fa-filter {
+    padding: 0 5px;
+}
+
+/* MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY */
+
+@media (max-width: 850px) {
+    /* .aparecer {
+        display: block;
+    } */
+    .desaparecer {
+        display: none;
+    }  
+    .contenedor-aside {
+        border: 4px solid rgb(226, 164, 30);
+        background-color: white;
+        width: 270px;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 1s;
+        transform: translate(300px);
+    }
+    
+}
+
+/* ON CLICK TROMPETA TIENE QUE UBICAR EL MENU FILTRO A LA DERECHA */
+
+/* .fas.calificacion-filter {
+    font-family: montserrat
+} */
 
 
 /* TARJETAS DE PRODUCTOS */
@@ -248,7 +291,7 @@ main {
     background-color: white;
     transition: 0.3s ease-in;
     display: flex;
-    /* TENGO QUE SACAER ESTO PARA VER LOS DATOS A LA DERECHA _ */
+    
     flex-direction: column; 
     justify-content: center;
     align-items: center;
@@ -256,7 +299,6 @@ main {
 }
 
 /* CLASES PARA JS */
-/* PARA EL CONTENEDOR tarjetas una abajo de la otra */
 .tarjetas-productos-column {
     display: flex;
     flex-direction: column;
@@ -292,7 +334,6 @@ main {
     transform: scale(1.5);
     opacity: 0.5;
 }
-
 
 .especificaciones {
     width: 100%;
@@ -470,17 +511,18 @@ main {
     display: flex;
 }
 
-.datos-checkout {
+/* .datos-checkout {
     border: 5px solid #0a9e3c;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
-
+ */
 
 .datos-personales {
     border: 5px solid #ee8f13;
     padding: 20px 0;
+    flex-grow: 1
 }
 
 .datos-personales h3 {
@@ -495,7 +537,10 @@ main {
     padding: 20px 0;
 }
 
-.datos-personales label input {
+hr {
+    margin: 30px 15px
+}
+.main-checkout .datos-personales {
     width: 300px;
 }
 
@@ -521,8 +566,9 @@ main {
 
 .resumen {
     border: 5px solid #ecf017;
+    padding: 15px;
     background-color: #eee;
-    flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -537,11 +583,6 @@ main {
     padding: 10px 0;
 }
  
-.montos {
-
-}
-
-
 
 
 .footer-checkout {
@@ -586,7 +627,9 @@ main {
 /* MODAL DE PAGO */
 
 footer {
+
     background-color: #FFFFFF;
+    width: 100%;
     height: 120px;
     display: flex;
     justify-content: center;

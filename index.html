@@ -23,8 +23,6 @@
                 <i class="fas fa-shopping-cart"></i>
                 <button id="abrir-menu" class="button button-carrito">carrito 0 items</button>
             </div>
-
-            </div>
         </nav>
     </header>
 
@@ -46,7 +44,7 @@
 
     <main>
         <aside>
-            <div class="contenedor-aside">
+            <div class="contenedor-aside" id="menu-mobile">
                 <div class="cabecera-aside">
                     <h2>FILTROS</h2>
                     <div class="tacho">
@@ -66,7 +64,7 @@
                         </label>
 
                         <div class="input-columna">
-                            
+
                             <h2>CATEGORIA</h2>
                             <label for="idconsolas">
                                 <input type="checkbox" name="categorias" id="idconsolas" value="consolas"
@@ -163,16 +161,21 @@
             <div class="cabecera-tarjetas">
                 <p class="cantidad-productos">Mostrando x productos de x</p>
                 <div class="organizador-productos">
-                    <p>Ver como
-                    </p>
+                    <label for="boton-filtro" id="boton-filtro">
+                        <button class="ACA VA HIDDEN aparecer input-style">
+                            <i class="fas fa-filter"> </i>Filtros
+                        </button>
+                    </label>
 
+                    <p class="desaparecer">Ver como
+                    </p>
                     <label for="grilla">
-                        <button class="input-style">
+                        <button class=" desaparecer input-style">
                             <i class="fas fa-th" id="grilla"></i>
                         </button>
                     </label>
                     <label for="lista">
-                        <button class="input-style">
+                        <button class="desaparecer input-style">
                             <i class="fas fa-list" id="lista"></i>
                         </button>
                     </label>
@@ -187,7 +190,7 @@
             <div class="tarjetas-productos" id="contenedor-tarjetas">
 
 
-                <div class="producto" data-nombre=`celularxiaomi` data-categoria=`celular` data-precio=`22499`
+                <div class="producto" data-nombre="celularxiaomi" data-categoria="celular" data-precio="22499"
                     data-rating="3">
                     <div class="contenedor-img">
                         <img src="./img/xiaomi.jpg" alt="">
@@ -197,7 +200,9 @@
                             Celular Xiaomi
                         </h3>
                         <p>$ 22499</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio reprehenderit numquam sit tempore veritatis ipsa ex cupiditate natus, illum autem porro nostrum animi laborum nobis alias? Labore odit porro pariatur!</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Optio reprehenderit numquam sit tempore veritatis ipsa ex cupiditate natus, illum autem
+                            porro nostrum animi laborum nobis alias? Labore odit porro pariatur!</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -211,7 +216,7 @@
 
 
 
-                <div class="producto" data-nombre=`playstation 4` data-categoria="consolas" data-precio=`59999`
+                <div class="producto" data-nombre="playstation 4" data-categoria="consolas" data-precio="59999"
                     data-rating="5">
                     <div class="contenedor-img">
                         <img src="./img/ps4.jpg" alt="">
@@ -221,7 +226,9 @@
                             PlayStation 4
                         </h3>
                         <p>$ 59999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nobis laborum repellat et aut qui, recusandae sit magni maxime harum aliquam, at vel labore adipisci eveniet dolorum sed quis fugiat.</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Iure nobis laborum repellat et aut qui, recusandae sit magni maxime harum aliquam, at vel
+                            labore adipisci eveniet dolorum sed quis fugiat.</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -234,7 +241,7 @@
                 </div>
 
 
-                <div class="producto" data-nombre=`camara nikon` data-categoria="camaras" data-precio=`54999`
+                <div class="producto" data-nombre="camara nikon" data-categoria="camaras" data-precio="54999"
                     data-rating="2">
                     <div class="contenedor-img">
                         <img src="./img/nikon.jpg" alt="">
@@ -244,7 +251,9 @@
                             Cámara Nikon
                         </h3>
                         <p>$ 54999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatibus esse dolores necessitatibus, voluptas id, praesentium laudantium odio at est molestiae voluptatem atque, eius totam ab similique dolorem. Non, nesciunt?</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima voluptatibus esse dolores necessitatibus, voluptas id, praesentium laudantium odio at
+                            est molestiae voluptatem atque, eius totam ab similique dolorem. Non, nesciunt?</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -257,7 +266,7 @@
                 </div>
 
 
-                <div class="producto" data-nombre=`headphones sony` data-categoria="accesorios" data-precio=`24999`
+                <div class="producto" data-nombre="headphones sony" data-categoria="accesorios" data-precio="24999"
                     data-rating="3">
                     <div class="contenedor-img">
                         <img src="./img/sony.png" alt="">
@@ -267,7 +276,9 @@
                             Headphones Sony
                         </h3>
                         <p>$ 24999</p>
-                        <p class="descripcion-producto hidden" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque porro voluptate, omnis odit sed praesentium libero corporis earum eligendi? Sint ex quod fugiat, quasi atque maiores dolores alias eveniet nihil?</p>
+                        <p class="descripcion-producto hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Eaque porro voluptate, omnis odit sed praesentium libero corporis earum eligendi? Sint ex
+                            quod fugiat, quasi atque maiores dolores alias eveniet nihil?</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -280,7 +291,7 @@
                 </div>
 
 
-                <div class="producto" data-nombre=`nintendo switch` data-categoria="consolas" data-precio=`46999`
+                <div class="producto" data-nombre="nintendo switch" data-categoria="consolas" data-precio="46999"
                     data-rating="5">
                     <div class="contenedor-img">
                         <img src="./img/switch.jpg" alt="">
@@ -290,7 +301,9 @@
                             Nintendo Switch
                         </h3>
                         <p>$ 46999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam asperiores, quos eaque, repellendus possimus nesciunt ab tempore assumenda cupiditate sunt, voluptate quidem iusto facere qui fugit tenetur quam? Sit, dolorum!</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Ipsam asperiores, quos eaque, repellendus possimus nesciunt ab tempore assumenda cupiditate
+                            sunt, voluptate quidem iusto facere qui fugit tenetur quam? Sit, dolorum!</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -303,7 +316,7 @@
                 </div>
 
 
-                <div class="producto" data-nombre=`notebook asus` data-categoria="notebooks" data-precio=`32999`
+                <div class="producto" data-nombre="notebook asus" data-categoria="notebooks" data-precio="32999"
                     data-rating="1">
                     <div class="contenedor-img">
                         <img src="./img/asus.png" alt="">
@@ -313,7 +326,9 @@
                             Notebook Asus
                         </h3>
                         <p>$ 32999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quisquam, eveniet exercitationem illo tenetur fugiat pariatur, explicabo minus ut autem non qui corporis temporibus blanditiis excepturi at sunt repellendus quod.</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Sint, quisquam, eveniet exercitationem illo tenetur fugiat pariatur, explicabo minus ut
+                            autem non qui corporis temporibus blanditiis excepturi at sunt repellendus quod.</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
@@ -326,7 +341,7 @@
                 </div>
 
 
-                <div class="producto" data-nombre=`notebook msi` data-categoria="notebooks" data-precio=`37999`
+                <div class="producto" data-nombre="notebook msi" data-categoria="notebooks" data-precio="37999"
                     data-rating="3">
                     <div class="contenedor-img">
                         <img src="./img/msi.png" alt="">
@@ -336,7 +351,10 @@
                             Notebook MSI
                         </h3>
                         <p>$ 37999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, reiciendis! Inventore cupiditate dicta ex atque voluptatem esse, consequatur hic vitae, sapiente praesentium ipsam, consectetur quis laborum! Blanditiis delectus necessitatibus molestiae!</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Alias, reiciendis! Inventore cupiditate dicta ex atque voluptatem esse, consequatur hic
+                            vitae, sapiente praesentium ipsam, consectetur quis laborum! Blanditiis delectus
+                            necessitatibus molestiae!</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -349,7 +367,7 @@
                 </div>
 
 
-                <div class="producto" data-nombre=`headphones philips` data-categoria="accesorios" data-precio=`11999`
+                <div class="producto" data-nombre="headphones philips" data-categoria="accesorios" data-precio="11999"
                     data-rating="2">
                     <div class="contenedor-img">
                         <img src="./img/headphones.png" alt="">
@@ -359,7 +377,9 @@
                             Headphones Philips
                         </h3>
                         <p>$ 11999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quisquam, praesentium amet harum cupiditate numquam ipsa ullam voluptatibus id labore. Sit error perferendis consequatur aut itaque aperiam molestias, molestiae sint?</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ut quisquam, praesentium amet harum cupiditate numquam ipsa ullam voluptatibus id labore.
+                            Sit error perferendis consequatur aut itaque aperiam molestias, molestiae sint?</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -371,7 +391,7 @@
                     </div>
                 </div>
 
-                <div class="producto" data-nombre=`macbook` data-categoria="notebooks" data-precio=`119999`
+                <div class="producto" data-nombre="macbook" data-categoria="notebooks" data-precio="119999"
                     data-rating="4">
                     <div class="contenedor-img">
                         <img src="./img/macbook.png" alt="">
@@ -381,7 +401,9 @@
                             Macbook
                         </h3>
                         <p>$ 119999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora amet, quis ut odio fugiat, nam eum atque odit dolorum, dolores illo. Cumque recusandae sunt exercitationem quibusdam ea, voluptatibus ad impedit!</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Tempora amet, quis ut odio fugiat, nam eum atque odit dolorum, dolores illo. Cumque
+                            recusandae sunt exercitationem quibusdam ea, voluptatibus ad impedit!</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -395,7 +417,7 @@
 
 
 
-                <div class="producto" data-nombre=`iphone` data-categoria="celulares" data-precio=`79999`
+                <div class="producto" data-nombre="iphone" data-categoria="celulares" data-precio="79999"
                     data-rating="3">
                     <div class="contenedor-img">
                         <img src="./img/iphone.jpeg" alt="">
@@ -405,7 +427,9 @@
                             iPhone
                         </h3>
                         <p>$ 79999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deleniti ducimus neque amet possimus non quis atque libero sunt laborum id, deserunt animi, corrupti molestias quibusdam aliquid alias accusamus beatae.</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Sed deleniti ducimus neque amet possimus non quis atque libero sunt laborum id, deserunt
+                            animi, corrupti molestias quibusdam aliquid alias accusamus beatae.</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -419,7 +443,7 @@
 
 
 
-                <div class="producto" data-nombre=`xbox one` data-categoria="consolas" data-precio=`69999`
+                <div class="producto" data-nombre="xbox one" data-categoria="consolas" data-precio="69999"
                     data-rating="4">
                     <div class="contenedor-img">
                         <img src="./img/xbox.jpg" alt="">
@@ -430,7 +454,9 @@
 
                         </h3>
                         <p>$ 69999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consectetur iusto, eaque explicabo corporis vel, enim molestiae tenetur corrupti ad provident voluptatibus facere, inventore pariatur asperiores aliquam eveniet.</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Vitae consectetur iusto, eaque explicabo corporis vel, enim molestiae tenetur corrupti ad
+                            provident voluptatibus facere, inventore pariatur asperiores aliquam eveniet.</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -442,7 +468,7 @@
                     </div>
                 </div>
 
-                <div class="producto" data-nombre=`mouse gamer` data-categoria="accesorios" data-precio=`4999`
+                <div class="producto" data-nombre="mouse gamer" data-categoria="accesorios" data-precio="4999"
                     data-rating="5">
                     <div class="contenedor-img">
                         <img src="./img/mouse.jpg" alt="">
@@ -452,7 +478,10 @@
                             Mouse Gamer
                         </h3>
                         <p>$ 4999</p>
-                        <p class="descripcion-producto hidden" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima facilis itaque voluptatibus eos harum deleniti, eligendi sapiente beatae magnam, inventore quod earum in! Consequuntur, doloribus animi! Asperiores quos natus corrupti nostrum!</p>
+                        <p class="descripcion-producto hidden">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Minima facilis itaque voluptatibus eos harum deleniti, eligendi sapiente beatae magnam,
+                            inventore quod earum in! Consequuntur, doloribus animi! Asperiores quos natus corrupti
+                            nostrum!</p>
                         <div class="calificacion">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -500,31 +529,30 @@
     <div class="overlay ocultar" id="overlay2">
 
         <article class="modal-checkout" id="modal-checkout">
-            <div class="header-checkout">
-                <h2>Checkout</h2>
-            </div>
-            <div class="main-checkout">
-                <form action="" class="datos-checkout">
+            <form class="datos-checkout">
+                <div class="header-checkout">
+                    <h2>Checkout</h2>
+                </div>
+                <div class="main-checkout">
                     <div class="datos-personales">
                         <h3>
                             Datos Personales
                         </h3>
-                        <h2>Nombre y apellido *</h2>
+
                         <label for="nombre">
+                            <h2>Nombre y apellido *</h2>
                             <input type="text" name="nombre" id="nombre" class="input-style"
                                 placeholder="p. ej.:Ada Lovelace" required>
                         </label>
-                        <h2>
-                            Email *
-                        </h2>
+
+
                         <label for="email">
-                            <input type="email" name="email" id="email" class="input-style"
-                                placeholder="p. ej.:ada.lovelace@gmail.com">
+                            <h2> Email * </h2>
+                            <input type="email" id="email" class="input-style"
+                                placeholder="p. ej.:ada.lovelace@gmail.com" name="email" required>
                         </label>
-                    </div>
 
-
-                    <hr>
+                        <hr>
 
                     <div class="opciones-pago">
                         <h3>Opciones de pago</h3>
@@ -544,30 +572,33 @@
                             <input type="checkbox" id="input-descuento">Tengo tarjeta de descuento
                         </label>
                     </div>
-                </form>
-                <div class="resumen">
-                    <div class="header-resumen">
-                        <h3>Resumen</h3>
                     </div>
-                    <div class="montos">
-                        <p>subtotal: <span id="subtotal">0</span> </p>
-                        <p class="hidden descuento">Descuento 10%: <span id="descuento">0</span></p>
-                        <p class="hidden envio">Envio: <span id="envio">0</span></p>
-                        <p class="hidden recargo">Recargo: <span id="recargo">0</span></p>
-                        <p>total: <span id="total">0</span></p>
+
+                    
+
+                    <div class="resumen">
+                        <div class="header-resumen">
+                            <h3>Resumen</h3>
+                        </div>
+                        <div class="montos">
+                            <p>subtotal: <span id="subtotal">0</span> </p>
+                            <p class="hidden descuento">Descuento 10%: <span id="descuento">0</span></p>
+                            <p class="hidden envio">Envio: <span id="envio">0</span></p>
+                            <p class="hidden recargo">Recargo: <span id="recargo">0</span></p>
+                            <p>total: <span id="total">0</span></p>
+                        </div>
                     </div>
+                </div>
+                <div class="footer-checkout">
+                    <button id="cerrar-checkout" class="seguir-comprando">SEGUIR COMPRANDO</button>
+                    <input type="submit" class="finalizar-compra" value="FINALIZAR">
 
 
 
                 </div>
 
+            </form>
 
-            </div>
-            <div class="footer-checkout">
-                <button id="cerrar-checkout" class="seguir-comprando">SEGUIR COMPRANDO</button>
-                <button class="finalizar-compra">FINALIZAR</button>
-
-            </div>
 
         </article>
 

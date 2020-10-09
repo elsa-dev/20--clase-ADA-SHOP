@@ -172,6 +172,21 @@ limpiarSeleccionesUsuario = () => {
     }
 }
 
+
+// MENU MOBILE MENU MOBILE MENU MOBILE
+// MENU MOBILE MENU MOBILE MENU MOBILE
+
+const botonMenuMobile = document.getElementById("boton-filtro")
+const menuDeFiltro = document.getElementsByClassName("contenedor-aside")
+c(botonMenuMobile)
+
+botonMenuMobile.onclick = () => {
+    menuDefiltro.classList.add("mostrar-menu")
+}
+
+
+
+
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
 
@@ -215,16 +230,14 @@ botonCerrarCheckout.onclick = () => {
 const grilla = document.getElementById("grilla")
 const lista = document.getElementById("lista")
 const contenedorTarjetas = document.getElementById("contenedor-tarjetas")
-// SELECCIONAR ESPECIFICACIONES DE TARJETAS ya esta cards
 const descripciones = document.getElementsByClassName('especificaciones')
 const descripcionProducto = document.getElementById('descripcion-producto')
 const textos = document.getElementsByClassName('descripcion-producto')
 
-c(textos)
+
 
 lista.onclick = () => {
     contenedorTarjetas.classList.add("tarjetas-productos-column")
-    // cada card horizontal
     for(card of cards) {
        card.classList.add('foto-izq') 
     }
@@ -233,9 +246,7 @@ lista.onclick = () => {
     }
     for(let texto of textos) {
         texto.classList.remove('hidden')
-    }
-    
-    
+    } 
     
 }
 grilla.onclick = () => {
