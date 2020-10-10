@@ -136,21 +136,40 @@ const filtrarTarjetas = () => {
             ocultarTarjeta(card)
         }
     }
+    contarProductosMostrados()
 }
 
+// const cards = document.getElementsByClassName("producto");
+const mostrandoXProductos = document.getElementById("cantidad-productos")
+
+
+const contarProductosMostrados = (card) => {
+    let numeroDeProductosMostrados = 0
+    for(let card of cards) {
+        if(pasaFiltros(card)) {
+            numeroDeProductosMostrados++ 
+        }
+    }
+    mostrandoXProductos.textContent = `Mostrando ${numeroDeProductosMostrados}    producto(s) de ${cards.length}`
+}
+
+
+
 filtroBusqueda.oninput = () => {
-    filtrarTarjetas()
+    filtrarTarjetas() 
+      
 }
 
 for (let checkbox of filtroRating) {
     checkbox.oninput = () => {
         filtrarTarjetas()
+               
     }
 }
 
 for (let checkbox of filtroCategoria) {
     checkbox.oninput = () => {
-        filtrarTarjetas()
+        filtrarTarjetas()        
     }
 }
 
@@ -167,9 +186,10 @@ limpiarSeleccionesUsuario = () => {
     for (let checkbox of checkboxes) {
         checkbox.checked = false
     }
-    for( card of cards) {
+    for (card of cards) {
         mostrarTarjeta(card)
     }
+    mostrandoXProductos.textContent = `Mostrando 12 producto(s) de 12`
 }
 
 
@@ -178,11 +198,11 @@ limpiarSeleccionesUsuario = () => {
 
 const botonMenuMobile = document.getElementById("boton-filtro")
 const menuDeFiltro = document.getElementsByClassName("contenedor-aside")
-c(botonMenuMobile)
+// c(botonMenuMobile)
 
-botonMenuMobile.onclick = () => {
-    menuDefiltro.classList.add("mostrar-menu")
-}
+// botonMenuMobile.onclick = () => {
+//     menuDefiltro.classList.add("mostrar-menu")
+// }
 
 
 
@@ -238,30 +258,30 @@ const textos = document.getElementsByClassName('descripcion-producto')
 
 lista.onclick = () => {
     contenedorTarjetas.classList.add("tarjetas-productos-column")
-    for(card of cards) {
-       card.classList.add('foto-izq') 
+    for (card of cards) {
+        card.classList.add('foto-izq')
     }
-    for(let descripcion of descripciones) {
-      descripcion.classList.add("producto-horizontal")  
+    for (let descripcion of descripciones) {
+        descripcion.classList.add("producto-horizontal")
     }
-    for(let texto of textos) {
+    for (let texto of textos) {
         texto.classList.remove('hidden')
-    } 
-    
+    }
+
 }
 grilla.onclick = () => {
     contenedorTarjetas.classList.add("tarjetas-productos")
     contenedorTarjetas.classList.remove("tarjetas-productos-column")
-    for(card of cards) {
-        card.classList.remove('foto-izq') 
-     }
-    for(let descripcion of descripciones) {
-       descripcion.classList.remove("producto-horizontal") 
+    for (card of cards) {
+        card.classList.remove('foto-izq')
     }
-    for(let texto of textos) {
+    for (let descripcion of descripciones) {
+        descripcion.classList.remove("producto-horizontal")
+    }
+    for (let texto of textos) {
         texto.classList.add('hidden')
     }
-    
+
 }
 
 // CHECKOUT CHECKOUT CHECKOUT 
@@ -282,7 +302,8 @@ const parrafoDescuento = document.querySelector(".descuento")
 const parrafoEnvio = document.querySelector(".envio")
 const parrafoRecargo = document.querySelector(".recargo")
 
-const subtotal = 5596
+const subtotal = 22499
+
 
 mostrarSubtotal.textContent = subtotal
 mostrarTotal.textContent = subtotal

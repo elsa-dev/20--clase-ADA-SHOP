@@ -172,7 +172,6 @@ aside .contenedor-aside .cabecera-aside {
     background-color: transparent;
     padding: 5px;
     
-    
 }
 
 
@@ -509,20 +508,20 @@ main {
 .main-checkout {
     border: 5px solid #7460ce;
     display: flex;
+    
 }
 
-/* .datos-checkout {
+.datos-checkout {
     border: 5px solid #0a9e3c;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
- */
+
 
 .datos-personales {
     border: 5px solid #ee8f13;
     padding: 20px 0;
-    flex-grow: 1
 }
 
 .datos-personales h3 {
@@ -537,18 +536,15 @@ main {
     padding: 20px 0;
 }
 
-hr {
-    margin: 30px 15px
-}
-.main-checkout .datos-personales {
+.datos-personales label input {
     width: 300px;
 }
 
 .opciones-pago {
     border: 5px solid #cf1591;
     padding: 20px 0;
-    display: flex;
-    flex-direction: column;
+    /*! display: flex; */
+    /*! flex-direction: column; */
 }
 
 .opciones-pago h3 {
