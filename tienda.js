@@ -197,12 +197,11 @@ limpiarSeleccionesUsuario = () => {
 // MENU MOBILE MENU MOBILE MENU MOBILE
 
 const botonMenuMobile = document.getElementById("boton-filtro")
-const menuDeFiltro = document.getElementsByClassName("contenedor-aside")
-// c(botonMenuMobile)
+const menuDeFiltro = document.getElementById("menu-mobile")
 
-// botonMenuMobile.onclick = () => {
-//     menuDefiltro.classList.add("mostrar-menu")
-// }
+botonMenuMobile.onclick = () => {
+    menuDeFiltro.classList.add("mostrar-menu")
+}
 
 
 
@@ -309,16 +308,24 @@ mostrarSubtotal.textContent = subtotal
 mostrarTotal.textContent = subtotal
 
 const obtenerGastoEnvio = (subtotal) => {
-    return subtotal + 50
+    return subtotal + 300
 }
 
 const obtenerRecargo = (subtotal) => {
-    let recargo = subtotal * 0.1
+    let numeroRecargo = subtotal * 0.1
+    let recargo = numeroRecargo.toFixed(2)
     return subtotal + recargo
 }
 
+let numeroConDecimales = 99.658963
+let decimales = numeroConDecimales.toFixed(2)
+
+c(decimales)
+
+
 const obtenerDescuento = (subtotal) => {
-    let descuento = subtotal * 0.1
+    let numeroDescuento = subtotal * 0.05
+    let descuento = Math.round(numeroDescuento)
     return subtotal - descuento
 }
 
@@ -342,7 +349,7 @@ radioCredito.oninput = () => {
 
 checkboxEnvio.oninput = () => {
     parrafoEnvio.classList.toggle("hidden")
-    mostrarEnvio.textContent = 50
+    mostrarEnvio.textContent = 300
     mostrarTotal.textContent = obtenerTotal(subtotal)
 }
 

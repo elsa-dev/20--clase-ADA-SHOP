@@ -161,12 +161,6 @@
             <div class="cabecera-tarjetas">
                 <p id="cantidad-productos">Mostrando 12 producto(s) de 12</p>
                 <div class="organizador-productos">
-                    <label for="boton-filtro" id="boton-filtro">
-                        <button class="ACA VA HIDDEN aparecer input-style">
-                            <i class="fas fa-filter"> </i>Filtros
-                        </button>
-                    </label>
-
                     <p class="desaparecer">Ver como
                     </p>
                     <label for="grilla">
@@ -177,6 +171,11 @@
                     <label for="lista">
                         <button class="desaparecer input-style">
                             <i class="fas fa-list" id="lista"></i>
+                        </button>
+                    </label>
+                    <label for="boton-filtro" id="boton-filtro">
+                        <button class="ACA VA HIDDEN aparecer input-style">
+                            <i class="fas fa-filter"> </i>Filtros
                         </button>
                     </label>
 
@@ -573,18 +572,15 @@
                         </label>
                     </div>
                     </div>
-
-                    
-
                     <div class="resumen">
                         <div class="header-resumen">
                             <h3>Resumen</h3>
                         </div>
                         <div class="montos">
                             <p>subtotal: <span id="subtotal">0</span> </p>
-                            <p class="hidden descuento">Descuento 10%: <span id="descuento">0</span></p>
+                            <p class="hidden descuento descuento-color">Descuento 10%: <span id="descuento">0</span></p>
                             <p class="hidden envio">Envio: <span id="envio">0</span></p>
-                            <p class="hidden recargo">Recargo: <span id="recargo">0</span></p>
+                            <p class="hidden recargo recargo-color">Recargo: <span id="recargo">0</span></p>
                             <p>total: <span id="total">0</span></p>
                         </div>
                     </div>
