@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,24 +9,27 @@
 body {
   background-color: #e2dede;
   overflow-x: hidden;
-  width: 100%;
+  /* width: 100%; */
 }
 
 header {
+  border: 1px solid rgb(202, 177, 63);
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
-  border: 4px solid red;
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1400px;
   height: 70px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin: auto;
 }
 
 .logo {
-  border: 4px solid violet;
+  border: 1px solid violet;
   margin: 0 10px;
   display: flex;
   align-items: center;
@@ -41,6 +43,7 @@ nav {
 .contenedor-logo img {
   width: 100%;
 }
+
 .logo h2 {
   font-size: 16px;
   font-weight: 600;
@@ -61,7 +64,7 @@ nav {
   left: 35px;
 }
 
-.contenedor-banner {
+/* .contenedor-banner {
   border: 4px solid rgb(12, 180, 107);
   width: 100vw;
   height: 300px;
@@ -79,10 +82,11 @@ nav {
   top: 50%;
   margin-left: -119.57px;
   margin-top: -19.5px;
-}
+} */
 
-/* .imagen-cabecera {
-    border: 4px solid green;
+.imagen-cabecera {
+    border: 1px solid green;
+    width: 100%;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -93,26 +97,30 @@ nav {
 }
 
 .imagen-cabecera h1 {
-    border: 4px solid orangered;
+    border: 1px solid orangered;
     color: white;
     
-} */
+}
+
+/* MAIN */
 
 main {
-  border: 4px solid gray;
+  border: 1px solid gray;
+  max-width: 1400px ;
   display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 aside {
-  border: 4px solid rgb(211, 87, 16);
-  /* width: 20%; */
-  /* min-width: 300px; */
+  border: 1px solid rgb(211, 87, 16);
+  flex: 1;
 }
 
 aside .contenedor-aside {
-  border: 4px solid rgb(31, 10, 148);
-  margin: 20px;
+  border: 1px solid rgb(31, 10, 148);
 }
+
 aside h2 {
   font-size: 14px;
   font-weight: 600;
@@ -127,6 +135,7 @@ aside h2 {
   height: 15px;
   background-color: transparent;
   cursor: pointer;
+  padding-right: 20px;
 }
 
 /* BOTON  */
@@ -137,13 +146,13 @@ aside h2 {
 }
 
 aside .contenedor-aside .cabecera-aside {
-  border: 4px solid rgb(15, 155, 78);
+  border: 1px solid rgb(15, 155, 78);
   display: flex;
   justify-content: space-between;
 }
 
 .columna-aside {
-  border: 4px solid rgb(231, 18, 54);
+  border: 1px solid rgb(231, 18, 54);
 }
 
 .input-columna {
@@ -156,37 +165,39 @@ aside .contenedor-aside .cabecera-aside {
   border: none;
   border-bottom: 2px solid #2e2e31;
   background-color: transparent;
-  padding: 5px;
+  padding: 10px;
+}
+
+#filtro-busqueda {
+  width: 200px;
 }
 
 .fas.fa-search {
   position: relative;
-  right: 25px;
+  right: -170px;
+  top: -30px;
 }
 
 .fa-star {
   color: #fbc02d;
 }
 
-/* MAIN */
 
-main {
-  padding: 50px 0;
-  max-width: 1500px;
-  margin: auto;
-}
+
+
+
 
 .tarjetas {
-  border: 4px solid rgb(15, 187, 70);
-  width: 80%;
+  border: 1px solid rgb(15, 187, 70);
   display: flex;
   flex-direction: column;
+  flex: 6;
 }
 
 /* CABECERA DE TARJETAS  */
 
 .cabecera-tarjetas {
-  border: 4px solid crimson;
+  border: 1px solid crimson;
   font-size: 14px;
   background-color: white;
   height: 100px;
@@ -197,16 +208,17 @@ main {
 }
 
 .cantidad-productos {
-  border: 4px solid rgb(17, 76, 159);
+  border: 1px solid rgb(17, 76, 159);
 }
 
 .organizador-productos {
-  border: 4px solid rgb(226, 164, 30);
+  border: 1px solid rgb(226, 164, 30);
   width: 250px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
 }
+
 .organizador-productos button {
   border-bottom: none;
 }
@@ -219,43 +231,18 @@ main {
   padding: 0 5px;
 }
 
-/* MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY */
 
-@media (max-width: 850px) {
-  /* .aparecer {
-        display: block;
-    } */
-  .desaparecer {
-    display: none;
-  }
-  .contenedor-aside {
-    border: 4px solid rgb(226, 164, 30);
-    background-color: white;
-    width: 270px;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: 1s;
-    transform: translate(300px);
-  }
-}
-
-/* ON CLICK TROMPETA TIENE QUE UBICAR EL MENU FILTRO A LA DERECHA */
-
-/* .fas.calificacion-filter {
-    font-family: montserrat
-} */
 
 /* TARJETAS DE PRODUCTOS */
+
 .tarjetas-productos {
-  border: 4px solid blueviolet;
+  border: 1px solid blueviolet;
   display: flex;
   flex-wrap: wrap;
 }
 
 .producto {
-  border: 4px solid rgb(10, 7, 14);
+  border: 1px solid rgb(10, 7, 14);
   padding: 30px;
   margin: 5px;
   background-color: white;
@@ -268,6 +255,7 @@ main {
 }
 
 /* CLASES PARA JS */
+
 .tarjetas-productos-column {
   display: flex;
   flex-direction: column;
@@ -283,7 +271,7 @@ main {
 }
 
 .producto .contenedor-img {
-  border: 4px solid rgb(59, 13, 120);
+  border: 1px solid rgb(59, 13, 120);
   width: 250px;
   height: 250px;
   margin: 10px;
@@ -303,7 +291,7 @@ main {
 
 .especificaciones {
   width: 100%;
-  border: 2px solid orange;
+  border: 1px solid orange;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -312,6 +300,7 @@ main {
 }
 
 /* CLASES PARA JS descripcion izq */
+
 .producto-horizontal {
   align-items: flex-start;
 }
@@ -320,16 +309,14 @@ main {
   font-weight: 600;
 }
 
-.especificaciones h3,
-.especificaciones p,
-.especificaciones .calificacion {
+.especificaciones h3, .especificaciones p, .especificaciones .calificacion {
   padding: 10px;
 }
 
 /* ACA ESTA REPETIDO EL CSS DEL BUTTON  */
+
 .button-comprar {
   width: 260px;
-
   margin: 20px 0;
   padding: 20px 0;
   border: 0;
@@ -342,11 +329,44 @@ main {
   background-color: #e2dede;
 }
 
+/* MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY */
+
+@media (max-width: 850px) {
+  .aparecer {
+    display: block;
+  }
+  .desaparecer {
+    display: none;
+  }
+  .contenedor-aside {
+    border: 1px solid rgb(226, 164, 30);
+    background-color: white;
+    width: 270px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 1s;
+    transform: translate(300px);
+  }
+  aside {
+    border: 1px solid rgb(211, 87, 16);
+    flex: 0;
+  }
+  .producto {
+    border: 1px solid rgb(10, 7, 14);
+    padding: 10px;
+    
+  }
+
+}
+
 /* MODAL CARRITO */
+
 /* MODAL CARRITO */
 
 .menu {
-  border: 4px solid rgb(226, 164, 30);
+  border: 1px solid rgb(226, 164, 30);
   background-color: white;
   width: 400px;
   height: 100vh;
@@ -367,7 +387,7 @@ main {
 }
 
 .container-carrito {
-  border: 3px solid violet;
+  border: 1px solid violet;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -378,7 +398,7 @@ main {
 }
 
 .encabezado-carrito {
-  border: 3px solid green;
+  border: 1px solid green;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -434,10 +454,11 @@ main {
 }
 
 /* MODAL DE PAGO */
+
 /* MODAL DE PAGO */
 
 .modal-checkout {
-  border: 5px solid orange;
+  border: 1px solid orange;
   background-color: white;
   width: 800px;
   height: 800px;
@@ -452,27 +473,28 @@ main {
 }
 
 .header-checkout {
-  border: 5px solid rgb(19, 165, 243);
+  border: 1px solid rgb(19, 165, 243);
 }
+
 .header-checkout h2 {
   font-size: 24px;
   font-weight: 600;
 }
 
 .main-checkout {
-  border: 5px solid #7460ce;
+  border: 1px solid #7460ce;
   display: flex;
 }
 
 .datos-checkout {
-  border: 5px solid #0a9e3c;
+  border: 1px solid #0a9e3c;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .datos-personales {
-  border: 5px solid #ee8f13;
+  border: 1px solid #ee8f13;
   padding: 20px 0;
   flex-grow: 1;
 }
@@ -489,8 +511,7 @@ main {
   padding: 20px 0;
 }
 
-.datos-personales label input[type="email"],
-input[type="text"] {
+.datos-personales label input[type="email"], input[type="text"] {
   width: 300px;
 }
 
@@ -499,7 +520,7 @@ hr {
 }
 
 .opciones-pago {
-  border: 5px solid #cf1591;
+  border: 1px solid #cf1591;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
@@ -512,14 +533,15 @@ hr {
 }
 
 .opciones-pago label {
-  padding: 5px 0;
+  padding: 1px 0;
 }
+
 .opciones-pago label input {
-  padding: 5px 0;
+  padding: 1px 0;
 }
 
 .resumen {
-  border: 5px solid #ecf017;
+  border: 1px solid #ecf017;
   padding: 15px;
   background-color: #eee;
   min-width: 300px;
@@ -529,11 +551,11 @@ hr {
 }
 
 .descuento-color {
-    color: green;
+  color: green;
 }
 
 .recargo-color {
-    color: red;
+  color: red;
 }
 
 .header-resumen h3 {
@@ -544,7 +566,7 @@ hr {
 
 .footer-checkout {
   padding: 80px 10px 30px;
-  border: 5px solid rgb(255, 0, 89);
+  border: 1px solid rgb(255, 0, 89);
   display: flex;
   justify-content: flex-end;
 }
@@ -579,9 +601,11 @@ hr {
 }
 
 /* MODAL DE PAGO */
-/* MODAL DE PAGO */
+
+/* MODAL DE PAGO prueba */
 
 footer {
+  border: 1px solid blueviolet;
   background-color: #ffffff;
   width: 100%;
   height: 120px;

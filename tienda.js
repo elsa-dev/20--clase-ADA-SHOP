@@ -139,22 +139,6 @@ const filtrarTarjetas = () => {
     contarProductosMostrados()
 }
 
-// const cards = document.getElementsByClassName("producto");
-const mostrandoXProductos = document.getElementById("cantidad-productos")
-
-
-const contarProductosMostrados = (card) => {
-    let numeroDeProductosMostrados = 0
-    for(let card of cards) {
-        if(pasaFiltros(card)) {
-            numeroDeProductosMostrados++ 
-        }
-    }
-    mostrandoXProductos.textContent = `Mostrando ${numeroDeProductosMostrados}    producto(s) de ${cards.length}`
-}
-
-
-
 filtroBusqueda.oninput = () => {
     filtrarTarjetas() 
       
@@ -171,6 +155,23 @@ for (let checkbox of filtroCategoria) {
     checkbox.oninput = () => {
         filtrarTarjetas()        
     }
+}
+
+
+// CONTADOR DE PRODUCTOS MOSTRADOS 
+// CONTADOR DE PRODUCTOS MOSTRADOS 
+
+const mostrandoXProductos = document.getElementById("cantidad-productos")
+
+
+const contarProductosMostrados = (card) => {
+    let numeroDeProductosMostrados = 0
+    for(let card of cards) {
+        if(pasaFiltros(card)) {
+            numeroDeProductosMostrados++ 
+        }
+    }
+    mostrandoXProductos.textContent = `Mostrando ${numeroDeProductosMostrados}    producto(s) de ${cards.length}`
 }
 
 
@@ -201,6 +202,8 @@ const menuDeFiltro = document.getElementById("menu-mobile")
 
 botonMenuMobile.onclick = () => {
     menuDeFiltro.classList.add("mostrar-menu")
+    
+
 }
 
 
@@ -312,20 +315,13 @@ const obtenerGastoEnvio = (subtotal) => {
 }
 
 const obtenerRecargo = (subtotal) => {
-    let numeroRecargo = subtotal * 0.1
-    let recargo = numeroRecargo.toFixed(2)
+    let recargo = subtotal * 0.1
     return subtotal + recargo
 }
 
-let numeroConDecimales = 99.658963
-let decimales = numeroConDecimales.toFixed(2)
-
-c(decimales)
-
-
 const obtenerDescuento = (subtotal) => {
-    let numeroDescuento = subtotal * 0.05
-    let descuento = Math.round(numeroDescuento)
+    let descuento = subtotal * 0.05
+    
     return subtotal - descuento
 }
 
@@ -337,13 +333,13 @@ radioEfectivo.oninput = () => {
 
 checkboxDescuento.oninput = () => {
     parrafoDescuento.classList.toggle("hidden")
-    mostrarDescuento.textContent = subtotal - obtenerDescuento(subtotal)
+    mostrarDescuento.textContent = (subtotal - obtenerDescuento(subtotal)).toFixed(2)
     mostrarTotal.textContent = obtenerTotal(subtotal)
 }
 
 radioCredito.oninput = () => {
     parrafoRecargo.classList.remove("hidden")
-    mostrarRecargo.textContent = obtenerRecargo(subtotal) - subtotal
+    mostrarRecargo.textContent = (obtenerRecargo(subtotal) - subtotal).toFixed(2)
     mostrarTotal.textContent = obtenerTotal(subtotal)
 }
 
@@ -370,4 +366,7 @@ const obtenerTotal = (subtotal) => {
         gastosDeEnvio = obtenerGastoEnvio(subtotal) - subtotal
     }
     return subtotal + descuento + recargo + gastosDeEnvio
+    
 }
+
+// prueba
