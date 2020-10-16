@@ -198,16 +198,20 @@ limpiarSeleccionesUsuario = () => {
 // MENU MOBILE MENU MOBILE MENU MOBILE
 
 const botonMenuMobile = document.getElementById("boton-filtro")
-const menuDeFiltro = document.getElementById("menu-mobile")
+const menuDeFiltro = document.getElementById("cerrar-menu-mobile")
+const botonCerradoMenuMobile = document.getElementById("boton-cerrar-aside-filtros")
 
 botonMenuMobile.onclick = () => {
+    overlay.classList.remove("hidden")
     menuDeFiltro.classList.add("mostrar-menu")
-    
-
+    document.body.classList.add("no-scroll")
 }
 
-
-
+botonCerradoMenuMobile.onclick = () => {
+    overlay.classList.add("hidden")
+    document.body.classList.remove("no-scroll")
+    menuDeFiltro.classList.remove("mostrar-menu")
+}
 
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
 // OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
@@ -218,13 +222,13 @@ const menu = document.getElementById("menu")
 const overlay = document.getElementById("overlay")
 
 botonAbrirMenu.onclick = () => {
-    overlay.classList.remove("ocultar")
+    overlay.classList.remove("hidden")
     document.body.classList.add("no-scroll")
     menu.classList.add("mostrar-menu")
 }
 
 botonCerrarMenu.onclick = () => {
-    overlay.classList.add("ocultar")
+    overlay.classList.add("hidden")
     document.body.classList.remove("no-scroll")
     menu.classList.remove("mostrar-menu")
 
@@ -234,16 +238,17 @@ botonCerrarMenu.onclick = () => {
 
 const botonAbrirCheckout = document.getElementById("abrir-modal-checkout")
 const botonCerrarCheckout = document.getElementById("cerrar-checkout")
-// const menu = document.getElementById("menu")
 const overlayCheckout = document.getElementById("overlay2")
 
 botonAbrirCheckout.onclick = () => {
-    overlay2.classList.remove("ocultar")
-    // document.body.classList.add("no-scroll") no era necesario
+    overlayCheckout.classList.remove("hidden")
+    document.body.classList.add("no-scroll") 
+    
 }
 
 botonCerrarCheckout.onclick = () => {
-    overlay2.classList.add("ocultar")
+    overlay2.classList.add("hidden")
+    document.body.classList.remove("no-scroll")
 }
 
 // GRILLA Y LISTA DE PRODUCTOS
@@ -304,7 +309,7 @@ const parrafoDescuento = document.querySelector(".descuento")
 const parrafoEnvio = document.querySelector(".envio")
 const parrafoRecargo = document.querySelector(".recargo")
 
-const subtotal = 22499
+const subtotal = 82498
 
 
 mostrarSubtotal.textContent = subtotal
@@ -334,19 +339,19 @@ radioEfectivo.oninput = () => {
 checkboxDescuento.oninput = () => {
     parrafoDescuento.classList.toggle("hidden")
     mostrarDescuento.textContent = (subtotal - obtenerDescuento(subtotal)).toFixed(2)
-    mostrarTotal.textContent = obtenerTotal(subtotal)
+    mostrarTotal.textContent = (obtenerTotal(subtotal)).toFixed(2)
 }
 
 radioCredito.oninput = () => {
     parrafoRecargo.classList.remove("hidden")
     mostrarRecargo.textContent = (obtenerRecargo(subtotal) - subtotal).toFixed(2)
-    mostrarTotal.textContent = obtenerTotal(subtotal)
+    mostrarTotal.textContent = (obtenerTotal(subtotal)).toFixed(2)
 }
 
 checkboxEnvio.oninput = () => {
     parrafoEnvio.classList.toggle("hidden")
     mostrarEnvio.textContent = 300
-    mostrarTotal.textContent = obtenerTotal(subtotal)
+    mostrarTotal.textContent = (obtenerTotal(subtotal)).toFixed(2)
 }
 
 const obtenerTotal = (subtotal) => {
