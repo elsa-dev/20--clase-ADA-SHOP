@@ -213,8 +213,8 @@ botonCerradoMenuMobile.onclick = () => {
     menuDeFiltro.classList.remove("mostrar-menu")
 }
 
-// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
-// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
+// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLEY
+// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLEY
 
 const botonAbrirMenu = document.getElementById("abrir-menu")
 const botonCerrarMenu = document.getElementById("cerrar-menu")
@@ -233,8 +233,36 @@ botonCerrarMenu.onclick = () => {
     menu.classList.remove("mostrar-menu")
 
 }
-// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
-// OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY
+
+// OCULTAR Y MOSTRAR MODAL CONFIRMACION VACIADO
+// OCULTAR Y MOSTRAR MODAL CONFIRMACION VACIADO
+
+const botonConfirmarVaciado = document.getElementById("abrir-modal-confirmacion-vaciado")
+// const modalConfirmarVaciado = document.getElementById("modal-confirmar-vaciado")
+// c(modalConfirmarVaciado)
+const overlayModalConfirmarVaciado = document.getElementById("overlay3")
+
+
+botonConfirmarVaciado.onclick = () => {
+    overlayModalConfirmarVaciado.classList.remove("hidden")
+    document.body.classList.add("no-scroll")
+}
+
+const botonesConfirmarVaciado = document.getElementsByClassName("confirmar")
+
+
+for(boton of botonesConfirmarVaciado) {
+    boton.onclick = () => {
+    overlayModalConfirmarVaciado.classList.add("hidden")
+    document.body.classList.remove("no-scroll")
+    }
+}
+
+
+
+
+// OCULTAR Y MOSTRAR MODAL CHECKOUT CON OVERLEY
+// OCULTAR Y MOSTRAR MODAL CHECKOUT CON OVERLEY
 
 const botonAbrirCheckout = document.getElementById("abrir-modal-checkout")
 const botonCerrarCheckout = document.getElementById("cerrar-checkout")
@@ -243,11 +271,10 @@ const overlayCheckout = document.getElementById("overlay2")
 botonAbrirCheckout.onclick = () => {
     overlayCheckout.classList.remove("hidden")
     document.body.classList.add("no-scroll") 
-    
 }
 
 botonCerrarCheckout.onclick = () => {
-    overlay2.classList.add("hidden")
+    overlayCheckout.classList.add("hidden")
     document.body.classList.remove("no-scroll")
 }
 
@@ -374,4 +401,3 @@ const obtenerTotal = (subtotal) => {
     
 }
 
-// prueba

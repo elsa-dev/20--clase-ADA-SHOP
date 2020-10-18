@@ -31,13 +31,8 @@
 
     <!-- CABECERA -->
 
-    <!-- <div class="contenedor-banner">
-        <img src="./img/banner-recortada.jpg" alt="productos de electronica a la venta">
-        <h1 class="banner-titulo">ELECTRóNICA</h1>
-    </div> -->
-
-    <section class="imagen-cabecera">
-      <h1>ELECTRóNICA</h1>
+       <section class="imagen-cabecera">
+      <h1>ELECTRÓNICA</h1>
     </section>
 
     <!-- MAIN  -->
@@ -48,7 +43,7 @@
         <div class="contenedor-aside" id="cerrar-menu-mobile">
           <div class="cabecera-aside-mobile hidden" id="cabecera-aside-mobile">
             <button
-              class="cerrar-carrito cerrar-filtro-movil "
+              class="cerrar-carrito cerrar-filtro-movil"
               id="boton-cerrar-aside-filtros"
             >
               <i class="fas fa-times"></i>
@@ -223,7 +218,9 @@
 
       <section class="tarjetas">
         <div class="cabecera-tarjetas">
-          <p id="cantidad-productos" class="cantidad-productos">Mostrando 12 producto(s) de 12</p>
+          <p id="cantidad-productos" class="cantidad-productos">
+            Mostrando 12 producto(s) de 12
+          </p>
           <div class="organizador-productos">
             <p class="desaparecer">Ver como</p>
             <label for="grilla">
@@ -237,7 +234,7 @@
               </button>
             </label>
             <label for="boton-filtro" id="boton-filtro">
-              <button class="hidden aparecer  input-style">
+              <button class="hidden aparecer input-style">
                 <i class="fas fa-filter"> </i>Filtros
               </button>
             </label>
@@ -634,9 +631,9 @@
       </section>
     </main>
 
-    <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
-    <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
-    <!-- <button id="abrir-menu">abrir menu</button> mande el boton a donde correspondia-->
+    <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLEY -->
+    <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLEY -->
+    
 
     <div class="overlay hidden" id="overlay"></div>
 
@@ -696,18 +693,20 @@
         <p class="total-pago-carrito">Subtotal $82498</p>
 
         <button id="abrir-modal-checkout" class="comprar">COMPRAR</button>
-        <button class="vaciar">VACIAR</button>
+        <button id="abrir-modal-confirmacion-vaciado" class="vaciar">
+          VACIAR
+        </button>
       </div>
     </aside>
 
-    <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLAY -->
-    <!-- menu Y MOSTRAR MODAL CARRITO CON OVERLAY -->
+    <!-- OCULTAR Y MOSTRAR MODAL CARRITO CON OVERLEY -->
+    <!-- menu Y MOSTRAR MODAL CARRITO CON OVERLEY -->
 
     <!-- MODAL DE CHECKOUT  -->
     <!-- MODAL DE CHECKOUT  -->
 
     <div class="overlay hidden" id="overlay2">
-      <article class="modal-checkout" id="modal-checkout">
+      <section class="modal-checkout" id="modal-checkout">
         <form class="datos-checkout">
           <div class="header-checkout">
             <h2>Checkout</h2>
@@ -799,7 +798,7 @@
             <input type="submit" class="finalizar-compra" value="FINALIZAR" />
           </div>
         </form>
-      </article>
+      </section>
     </div>
 
     <!-- MODAL DE PAGO  -->
@@ -807,18 +806,23 @@
 
     <!-- MODAL CONFIRMACION VACIADO -->
     <!-- MODAL CONFIRMACION VACIADO -->
-    
-    <div class="confirmar-vaciado">
-      <p class="preguntar">Estás por vaciar el carrito, ¿quieres continuar? </p>
-      <div class="botones-vaciado">
-        <label for="boton-vaciar">
-        <button id="boton-vaciar">Cancelar</button>
-      </label>
-      <label for="boton-cancelar-vaciado">
-        <button id="boton-cancelar-vaciado">Vaciar</button>
-      </label>
+
+    <div class="overlay hidden" id="overlay3">
+      <div class="confirmar-vaciado" id="modal-confirmar-vaciado">
+        <p class="preguntar">
+          Estás por vaciar el carrito, ¿quieres continuar?
+        </p>
+
+        <div class="botones-vaciado">
+          <label for="">
+            <button class="confirmar confirmar-cancelar" id="boton-cancelar-vaciado">Cancelar</button>
+          </label>
+
+          <label for="">
+            <button class="confirmar confirmar-vaciar" id="boton-confirmar-vaciado">Vaciar</button>
+          </label>
+        </div>
       </div>
-      
     </div>
 
     <footer>
