@@ -663,6 +663,7 @@ footer .logo h2 {
   aside {
     flex: 0;
     z-index: 2;
+    width: 100%;
   }
   .fas.fa-search {
     position: relative;
