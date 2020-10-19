@@ -667,8 +667,8 @@ footer .logo h2 {
   }
   .fas.fa-search {
     position: relative;
-    right: 30px;
-    top: 5px;
+    right: -170px;
+    top: -25px;
   }
   .producto {
     padding: 10px;
