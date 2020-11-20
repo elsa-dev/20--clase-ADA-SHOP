@@ -10,11 +10,7 @@ Impecable el trabajo en accesibilidad. Utilizas correctamente las etiquetas sema
 
 ### Filtros y búsqueda
 
-Tus filtros funcionan a la perfeccion. Me gusta mucho como resolviste los filtros responsive y la reutilizacion de codigo. 
-
-### Filtros y búsqueda
-
-Tus filtros funcionan a la perfeccion. No solo eso, sino que la utilizacion en responsive es perfecta. Nada que comentar aqui, excelente trabajo. 
+Tus filtros funcionan a la perfeccion. Me gusta mucho como resolviste los filtros responsive y la reutilizacion de codigo. Nada que comentar aqui, excelente trabajo. 
 
 ### Carrito
 
